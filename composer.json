@@ -15,7 +15,7 @@
         "source": "https://github.com/SlavKoVrn/yii2-chat.git"
     },
     "require": {
-        "yiisoft/yii2": "~2.0",
+        "yiisoft/yii2": "~2.0"
     },
     "minimum-stability" : "dev",
     "autoload": {
