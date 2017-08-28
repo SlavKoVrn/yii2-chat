@@ -1,0 +1,26 @@
+{
+    "name": "slavkovrn/yii2-chat",
+    "description": "The Yii2 extension module to chat registered users.",
+    "type": "yii2-extension",
+    "keywords": ["Yii2","extension","chat","registered","users"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Viacheslav Kolesnikov",
+            "email": "slavko.chita@gmail.com",
+            "homepage": "http://yii2.kadastrcard.ru"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/SlavKoVrn/yii2-chat.git"
+    },
+    "require": {
+        "yiisoft/yii2": "~2.0",
+    },
+    "minimum-stability" : "dev",
+    "autoload": {
+        "psr-4": {
+            "slavkovrn\\chat\\": "src/"
+        }
+    }
+}
