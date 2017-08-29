@@ -2,7 +2,7 @@
 
 The Yii2 extension module to chat for registered users using User model of advanced template.
 
-[Log visitor demo page](http://school.kadastrcard.ru/chat)
+[Log visitor demo page](http://yii2.kadastrcard.ru/chat)
 
 ![Log visitor](http://yii2.kadastrcard.ru/uploads/chat.jpg)
 
