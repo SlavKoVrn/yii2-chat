@@ -51,6 +51,17 @@ $assets = ChatAsset::register($this);
     </div>
 </div>
 <?php
+if (Yii::$app->user->isGuest)
+    $data='';
+else
+    $data="data: {
+            'sendMessage':sendMessage,
+            'ChatModel[user_id]': $(button).data('id'),
+            'ChatModel[name]': $(button).data('name'),
+            'ChatModel[icon]': $(button).data('icon'),
+            'ChatModel[message]': $('#chat-message').val(),
+        },";
+
 $script=<<<SCRIPT
 function reloadchat(button,sendMessage) {
     if (sendMessage)
@@ -58,13 +69,7 @@ function reloadchat(button,sendMessage) {
     $.ajax({
         url: '/chat/default/send-message',
         type: "POST",
-        data: {
-            'sendMessage':sendMessage,
-            'ChatModel[user_id]': $(button).data('id'),
-            'ChatModel[name]': $(button).data('name'),
-            'ChatModel[icon]': $(button).data('icon'),
-            'ChatModel[message]': $('#chat-message').val(),
-        },
+        $data
         success: function (html) {
             if (sendMessage)
             {
