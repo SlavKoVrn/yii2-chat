@@ -28,6 +28,9 @@ class DefaultController extends Controller
 
     public function actionSendMessage()
     {
+        if (Yii::$app->user->isGuest)
+            return Yii::t('app','Registered can chat only');
+
         $post = Yii::$app->request->post();
 
         if ($post['sendMessage']=='true')
